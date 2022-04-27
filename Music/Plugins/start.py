@@ -27,10 +27,10 @@ def start_pannel():
     buttons = [
         [
             InlineKeyboardButton(text="Support​", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton(text="Updates", url=f"https://t.me/{CHANNEL}"),
+            InlineKeyboardButton(text="Channel", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-            InlineKeyboardButton("Command", url="https://telegra.ph/Skyzo-11-10"),
+            InlineKeyboardButton("Command", url="https://telegra.ph/-02-27-378"),
         ],
     ]
     return (
@@ -43,16 +43,14 @@ pstart_markup = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "Add Me To Your Group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                "𝗔𝗱𝗱 𝗠𝗲 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
         ],
         [
-            InlineKeyboardButton("Support", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton("Updates", url=f"https://t.me/{CHANNEL}"),
+            InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-            InlineKeyboardButton("Cd Music", url="https://telegra.ph/Skyzo-11-10"),
-            InlineKeyboardButton("Cd Dev", url="https://telegra.ph/壊Skyzo-01-21"),
-            InlineKeyboardButton("Cd Stream", url="https://telegra.ph/sᴋʏᴢᴏ-ᴇx-12-21"),
+            InlineKeyboardButton("🎵ᴄᴍᴅ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ 🎵", url="https://telegra.ph/-03-03-607"),
         ],
     ]
 )
@@ -78,9 +76,9 @@ async def welcome(_, message: Message):
                 out = start_pannel()
                 await message.reply_text(
                     f"""
-👋 **Hi, Thanks For Adding Me To The Group**
+👋 **Halo,Terima Kasih Telah Menambahkan Saya Ke Grup**
 
-🛵 **Don't Forget To Make Me Admin So Music Can Run Normally**
+🛵 **Jangan Lupa untuk Jadikan Saya Admin Agar Musik Bisa Berjalan Normal**
 """,
                     reply_markup=InlineKeyboardMarkup(out[1]),
                     disable_web_page_preview=True
@@ -101,8 +99,8 @@ async def start(_, message: Message):
     out = start_pannel()
     await message.reply_text(
         f"""
-**[🚀]({BOT_IMG}) Thanks For Adding Me To {message.chat.title}.**
-**㊙️ {BOT_NAME} Is Music Player And Video Player Bot**
+**[🚀]({BOT_IMG}) Terima kasih telah menambahkan saya ke {message.chat.title}.**
+**㊙️ {BOT_NAME} adalah Pemutar Musik Dan Pemutar Video Bot**
 """,
         reply_markup=InlineKeyboardMarkup(out[1]),
         disable_web_page_preview=True
@@ -119,11 +117,10 @@ async def play(_, message: Message):
         await app.send_message(
             message.chat.id,
             text=f"""
-**[🗣]({BOT_IMG}) Hello {rpk}! Ready Use Me?
+**[🗣]({BOT_IMG}) Hello {rpk}!
 
-🉐 [{BOT_NAME}](tg://user?id=2129034376) Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
-
-🧰 To Find Out All The Available Command Bots, You Can Press The Two Buttons Below, Namely Cd Music, Cd Dev And Cd Stream**
+✨ [{BOT_NAME}](t.me/{BOT_USERNAME}) Adalah Bot Yang Dapat Digunakan Untuk Mendengarkan Lagu Dalam Obrolan Suara Dan Dapat Memutar Video Dalam Obrolan Suara!
+🧰 Untuk Mengetahui Semua Bot Perintah Yang Tersedia, Anda Dapat Menekan Tombol Di Bawah Ini Yaitu 🎵ᴄᴍᴅ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ🎵*
 
 """,
             parse_mode="markdown",
@@ -147,7 +144,7 @@ async def play(_, message: Message):
 
 ❇️ **Title:** {x["title"]}
 
-⏳ **Duration:** {round(x["duration"] / 60)} Mins
+⏳ **Duration:** {round(x["duration"] / 180)} Mins
 👀 **Views:** `{x["view_count"]}`
 👍 **Like:** `{x["like_count"]}`
 👎 **Dislike:** `{x["dislike_count"]}`
